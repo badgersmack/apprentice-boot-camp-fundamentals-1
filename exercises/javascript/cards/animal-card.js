@@ -1,15 +1,18 @@
-let AnimalCard = class AnimalCard {
-  constructor(animal) {
-    this.value = animal;
-  }
-};
+const {Card} = require('./card.js');
 
-AnimalCard.prototype.snap = function (otherCard) {
+class AnimalCard extends Card {
+  constructor(value) {
+    super(value);
+  }
+
+snap(otherCard) {
   return (otherCard) && this.value === otherCard.value;
 };
 
-AnimalCard.prototype.toString = function () {
+toString() {
   return this.value.toString();
+};
+
 };
 
 module.exports = {

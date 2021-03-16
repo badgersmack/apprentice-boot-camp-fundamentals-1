@@ -1,3 +1,5 @@
+const {Card} = require('./card.js');
+
 class PlayingCard {
     constructor(value, suit) {
       this.value = value;
