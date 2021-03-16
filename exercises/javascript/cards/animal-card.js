@@ -1,6 +1,6 @@
 let AnimalCard = class AnimalCard {
   constructor(animal) {
-    this.animal = animal;
+    this.value = animal;
   }
 };
 

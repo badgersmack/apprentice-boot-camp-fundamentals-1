@@ -1,3 +1,4 @@
+const {PlayingDeck} = require('./playing-deck.js');
 const {AnimalDeck} = require('./animal-deck.js');
 const readline = require('readline');
 
@@ -26,7 +27,8 @@ Snap.prototype.play = async function () {
     });
     rl.prompt();
     currentCard = this.deck.deal();
-    console.log(currentCard.animal);
+    // console.log(currentCard.animal);
+    console.log(currentCard.value);
 
     for await (let line of rl) {
       if (line.length > 0 && line.charAt(0).toLowerCase() === 'a') {
@@ -63,6 +65,10 @@ Snap.prototype.play = async function () {
   process.exit(0);
 };
 
-let animalDeck = new AnimalDeck();
-let snap = new Snap(animalDeck);
+// let animalDeck = new AnimalDeck();
+// let snap = new Snap(animalDeck);
+// snap.play();
+
+let playingDeck = new PlayingDeck();
+let snap = new Snap(playingDeck);
 snap.play();
