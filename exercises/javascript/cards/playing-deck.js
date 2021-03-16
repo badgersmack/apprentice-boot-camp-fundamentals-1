@@ -28,13 +28,6 @@ class PlayingDeck {
   }
 
   getCards() {
-    // for (this.suit of this.suits) {
-    //   for (this.value of this.values) {
-    //     this.cards.push(new PlayingCard(this.value, this.suit).formatCard());
-    //   }
-    // }
-    // return this.cards;
-
     let result = new Array(this.cards.length);
     for (let i = 0; i < this.cards.length; i++) {
       let card = this.cards[i];
@@ -58,7 +51,6 @@ class PlayingDeck {
 
   deal() {
     let card = this.cards.splice(0, 1)[0];
-    console.log(card);
     return card;
   }
 }

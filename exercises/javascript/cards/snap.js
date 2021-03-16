@@ -27,8 +27,7 @@ Snap.prototype.play = async function () {
     });
     rl.prompt();
     currentCard = this.deck.deal();
-    // console.log(currentCard.animal);
-    console.log(currentCard.value);
+    console.log(currentCard.toString());
 
     for await (let line of rl) {
       if (line.length > 0 && line.charAt(0).toLowerCase() === 'a') {
@@ -64,10 +63,6 @@ Snap.prototype.play = async function () {
   console.log('Scores: ' + this.player1Score + ' vs ' + this.player2Score);
   process.exit(0);
 };
-
-// let animalDeck = new AnimalDeck();
-// let snap = new Snap(animalDeck);
-// snap.play();
 
 let playingDeck = new PlayingDeck();
 let snap = new Snap(playingDeck);

@@ -4,17 +4,12 @@ class PlayingCard {
       this.suit = suit;
     }
 
-    formatCard() {
-      return this.value + " of " + this.suit;
-    }
-
-
     snap(otherCard) {
         return (otherCard) && this.value === otherCard.value;
     }
 
     toString() {
-        return this.value.toString();
+        return this.value + " of " + this.suit;
     }
 
   }

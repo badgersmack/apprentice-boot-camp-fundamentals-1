@@ -9,7 +9,7 @@ AnimalCard.prototype.snap = function (otherCard) {
 };
 
 AnimalCard.prototype.toString = function () {
-  return this.animal.toString();
+  return this.animal;
 };
 
 module.exports = {
