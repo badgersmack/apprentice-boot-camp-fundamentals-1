@@ -1,20 +1,15 @@
-const {Card} = require('./card.js');
+const { Card } = require("./card.js");
 
-class PlayingCard {
-    constructor(value, suit) {
-      this.value = value;
-      this.suit = suit;
-    }
-
-    snap(otherCard) {
-        return (otherCard) && this.value === otherCard.value;
-    }
-
-    toString() {
-        return this.value + " of " + this.suit;
-    }
-
+class PlayingCard extends Card {
+  constructor(value, suit) {
+    super(value);
+    this.suit = suit;
   }
-  module.exports = {
-    PlayingCard: PlayingCard,
-  };
+
+  toString() {
+    return this.value + " of " + this.suit;
+  }
+}
+module.exports = {
+  PlayingCard: PlayingCard,
+};
