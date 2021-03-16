@@ -5,11 +5,11 @@ let AnimalCard = class AnimalCard {
 };
 
 AnimalCard.prototype.snap = function (otherCard) {
-  return (otherCard) && this.animal === otherCard.animal;
+  return (otherCard) && this.value === otherCard.value;
 };
 
 AnimalCard.prototype.toString = function () {
-  return this.animal;
+  return this.value.toString();
 };
 
 module.exports = {

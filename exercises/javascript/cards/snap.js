@@ -64,6 +64,6 @@ Snap.prototype.play = async function () {
   process.exit(0);
 };
 
-let playingDeck = new PlayingDeck();
-let snap = new Snap(playingDeck);
+let deck = new AnimalDeck();
+let snap = new Snap(deck);
 snap.play();
